@@ -43,7 +43,10 @@ form{
   align-items: flex-end;
   margin: auto;
   width: 70%;
-  /* background-color: hotpink; */
+  /* border: 2px solid black; */
+  background-color: rgba(255, 127, 80, 0.349);
+  /* border-radius: 25px; */
+  padding: 2rem 3rem;
 }
 
 button{
@@ -52,15 +55,17 @@ button{
   padding: 1.2rem 4rem;
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
-  border: 2px solid black;
+  border: 1px solid black;
   /* border-left: 0; */
   border-radius:150px;
   font-weight: bold;
   background-color: azure;
+  cursor: pointer;
 }
 
 button:hover{
-  background-color:coral;
+  background-color:rgba(255, 127, 80, 0.781);
+  /* background-color:rgb(233, 247, 247); */
 }
 
 
@@ -98,7 +103,7 @@ button:hover{
 .Name{
   padding-left: 1rem;
   font-weight: bold;
-  background-color: coral;
+  background-color: rgba(255, 127, 80, 0.801);
   padding: 1.1rem;
   width: 10rem;
 }
@@ -116,7 +121,7 @@ button:hover{
 .Number{
   padding-left: 1rem;
   font-weight: bold;
-  background-color: coral;
+  background-color: rgba(255, 127, 80, 0.801);
   padding: 1.1rem;
   width: 10rem;
 }
@@ -139,6 +144,6 @@ button:hover{
 
 h2{
   text-align: center;
-  background-color: lightcoral;
+  background-color:coral;
   margin: auto;
 }

@@ -19,6 +19,13 @@ const App = () => {
     setNewNumber(e.target.value)
   }
 
+  //todo
+  // add a copy number icon
+  // add a search bar
+  // connect to db and backend
+
+
+
   const AddNumToList = (Name,Number) => {
 
     if(!Name || !Number){
