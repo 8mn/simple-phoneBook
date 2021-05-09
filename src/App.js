@@ -1,5 +1,6 @@
 import classes from './App.module.css'
 import React, { useState } from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 
 const App = () => {
   const [ persons, setPersons ] = useState([
@@ -19,20 +20,50 @@ const App = () => {
   }
 
   const AddNumToList = (Name,Number) => {
-    const newPerson = {
-      name:Name,
-      number:Number
+
+    if(!Name || !Number){
+      console.log("empty")
+      toast.error('Please input all fields');
+    }else{
+      const newPerson = {
+        name:Name,
+        number:Number
+      }
+      // const newPerson = {Name,Number}
+      console.log(newPerson)
+      setPersons(persons.concat(newPerson))
+      // toast(`${Name} added to PhoneBook`, {
+      //   icon: '👏',
+      // });
+      toast.success(`${Name} added to PhoneBook`)
     }
-    // const newPerson = {Name,Number}
-    console.log(newPerson)
-    setPersons(persons.concat(newPerson))
-    console.log(persons)
   }
 
 
 
   return (
     <div className={classes.container}>
+     <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+        className: '',
+        style: {
+          margin: '40px',
+          background: 'black',
+          color: '#fff',
+          zIndex: 1,
+        },
+        duration: 5000,
+        success: {
+          duration: 3000,
+          theme: {
+            primary: 'green',
+            secondary: 'black',
+          },
+        },
+      }}
+    />
       <h1 className={classes.Heading}>Phonebook</h1>
       <section className={classes.phoneList}>
       <form>
