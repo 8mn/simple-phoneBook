@@ -1,6 +1,7 @@
 import classes from './App.module.css'
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
+import {BiSearch,BiTrash} from "react-icons/bi";
 
 const App = () => {
   const [ persons, setPersons ] = useState([
@@ -10,7 +11,7 @@ const App = () => {
   const [ newName, setNewName ] = useState('')
   const [ newNumber, setNewNumber ] = useState('')
 
-  const personList = persons.map((person) => <li key={person.name}>{person.name}: {person.number}</li>)
+  const personList = persons.map((person) => <li key={person.name}>{person.name}: {person.number}<button className={classes.delete}><BiTrash /></button></li>)
 
   const handleName = (e) => {
     setNewName(e.target.value)
@@ -36,12 +37,8 @@ const App = () => {
         name:Name,
         number:Number
       }
-      // const newPerson = {Name,Number}
       console.log(newPerson)
       setPersons(persons.concat(newPerson))
-      // toast(`${Name} added to PhoneBook`, {
-      //   icon: '👏',
-      // });
       toast.success(`${Name} added to PhoneBook`)
     }
   }
@@ -83,10 +80,16 @@ const App = () => {
           <input className={classes.NameInput} onChange={handleNumber} />
         </div>
         <div>
-          <button type="button" onClick={() => AddNumToList(newName,newNumber)}>Add</button>
+          <button className={classes.Add} type="button" onClick={() => AddNumToList(newName,newNumber)}>Add</button>
         </div>
       </form>
       <div className={classes.phoneNumberContainer}>
+      <div className={classes.searchBar}>
+        <input type="text" className={classes.search} />
+        <BiSearch className={classes.searchIcon} />
+      </div>
+      
+
       <h2 className={classes.subHeading}>Numbers</h2>
       <div className={classes.phoneNumbers}>
       <ul>
