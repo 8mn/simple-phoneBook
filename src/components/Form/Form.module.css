@@ -1,0 +1,92 @@
+.NameInputContainer{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    /* background-color: rgb(247, 162, 162); */
+    justify-content: space-between;
+    border: 2px solid black;
+  }
+
+  
+  .NameInput{
+    width: 90%;
+    padding: 1.2rem;
+    border: none;
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+  
+  .NameInput:focus{
+    outline-width: 0;
+  }
+  
+  
+  
+  .Name{
+    padding-left: 1rem;
+    font-weight: bold;
+    background-color: rgba(255, 127, 80, 0.801);
+    padding: 1.1rem;
+    width: 10rem;
+  }
+
+  
+  .PhoneInputContainer{
+    margin-top: .4rem;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    /* background-color: rgb(247, 162, 162); */
+    justify-content: space-between;
+    border: 2px solid black;
+  }
+  
+  .Number{
+    padding-left: 1rem;
+    font-weight: bold;
+    background-color: rgba(255, 127, 80, 0.801);
+    padding: 1.1rem;
+    width: 10rem;
+  }
+  
+
+  .Add{
+    margin-top: 1rem;
+    /* width: 5rem; */
+    padding: 1.2rem 4rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    border: 2px solid black;
+    /* border-left: 0; */
+    border-radius:150px;
+    font-weight: bold;
+    background-color: azure;
+    cursor: pointer;
+  }
+  
+  .Add:hover{
+    background-color:rgba(255, 127, 80, 0.781);
+    /* background-color:rgb(233, 247, 247); */
+  }
+
+  
+  form{
+    display: flex;
+    /* background-color: brown; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    width: 70%;
+    background-color: rgba(255, 127, 80, 0.349);
+    padding: 2rem 3rem;
+  }
+  
+  .phoneList{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5rem;
+    width: 60%;
+  }
+  

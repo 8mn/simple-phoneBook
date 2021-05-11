@@ -1,0 +1,119 @@
+.phoneNumber{
+    border: 2px solid greenyellow;
+  }
+  
+  
+  
+  
+  
+  
+  .phoneNumberContainer{
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    /* background-color: burlywood; */
+    border: 2px solid black;
+    padding: 2rem 4rem;
+    /* border-radius: 150px 0 0 0; */
+  }
+  
+  
+  
+  .phoneNumbers ul{
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-content: space-around; */
+    /* background-color: aqua;   */
+    /* border: 2px solid black; */
+  }
+  
+  h2{
+    text-align: center;
+    background-color:rgba(255, 127, 80, 0.801);
+    margin: auto;
+  }
+  
+  /* search */
+  .searchBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+    /* padding-left:.6rem; */
+    background-color: coral;
+    border: 1px solid rgba(0, 0, 0, 0.664);
+  }
+  
+  .search{
+    width: 100%;
+    padding: .8rem;
+    font-size: 1.9rem;
+    border: none;
+    margin-right: 1rem;
+  }
+  
+  .search:focus{
+    outline-width: 0;
+  }
+  
+  .searchIcon{
+    margin-right: .6rem;
+    border-radius: 0;
+    margin: 0rem 1.2rem;
+  }
+  
+  .delete{
+    align-items: flex-end;
+    padding: .4rem 1rem;
+    border-radius: 8px;
+    border: 2px solid black;
+    font-size: 2rem;
+    /* margin-left: 4rem; */
+    cursor: pointer;
+    background-color: whitesmoke;
+  }
+  
+  .delete:hover{
+    background-color: crimson;
+    color: azure;
+  }
+  
+  ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    padding-left: .4rem;
+    margin-top: .3rem;
+    flex-grow: 1;
+    background-color: rgba(255, 127, 80, 0.199);
+  }
+
+  .PersonNumber{
+    font-weight: bold;
+  }
+
+
+
+  @media screen and (max-width: 500px) {
+    form{
+      width: 120%;
+    }
+    .phoneNumberContainer{
+      width: 120%;
+      /* font-size: 1.2rem; */
+    }
+    ul li{
+      font-size: 2rem;
+    }
+    .delete{
+      padding: 1rem 2rem;
+    }
+  }
+  
