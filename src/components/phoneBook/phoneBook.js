@@ -9,6 +9,7 @@ import axios from 'axios';
 const PhoneBook = (props) => {
     const [ persons, setPersons ] = useState([]) 
     const[search,setsearch] = useState('')
+    const[deleteRender,setdeleteRender] = useState(false)
 
 
     const handleDelete = (person) => {
@@ -16,7 +17,7 @@ const PhoneBook = (props) => {
       axios.delete(`http://localhost:3001/api/persons/${person.id}`)
       .then((res) => {
           toast.success(`${person.name} was successfully deleted`);
-            console.log(res)
+            setdeleteRender(!deleteRender)
       })
       .catch(err => toast.error("Unknown error, Try again"))
     }
@@ -33,7 +34,7 @@ const PhoneBook = (props) => {
       .then(res => {setPersons(res.data)})
       .catch(err => toast.error(err))
       // eslint-disable-next-line 
-    },[props.updateRender])
+    },[props.updateRender,deleteRender])
   
 
 
