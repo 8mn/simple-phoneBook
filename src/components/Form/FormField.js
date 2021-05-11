@@ -30,9 +30,15 @@ function FormField(props) {
     
 //   toast.success(`${newPerson.name} added to PhoneBook`)
 
+// function isNumeric(n) {
+//   return !isNaN(parseFloat(n)) && isFinite(n);
+// }
+
     const AddNumToList = (Name,Number) => {
       if(!Name || !Number){
         toast.error('Please input all fields');
+      }else if(isNaN(Number)){
+        toast.error('Number must be integer!')
       }else{
         const newPerson = {
           name:Name,
@@ -40,8 +46,6 @@ function FormField(props) {
         }
         addnoteToDb(newPerson)
         setupdateRender(!updateRender)
-
-        
     }
 }
     
